@@ -9,7 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhonebookApp.Data", "Phoneb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhonebookApp.Console", "PhonebookApp.Console\PhonebookApp.Console.csproj", "{554B5466-EA93-4C78-AD92-16951E1E7FFD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{16ADBE4B-014F-4EE2-A3E9-0D944A2EEC21}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{2FADA54B-6278-46CD-8A59-6961C6344363}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\20201015214129_init.sql = Scripts\20201015214129_init.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
