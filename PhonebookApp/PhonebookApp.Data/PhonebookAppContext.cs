@@ -16,5 +16,17 @@ namespace PhonebookApp.Data
                 options.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
             });
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Entry>().ToTable("Entries");
+            modelBuilder.Entity<Entry>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.HasIndex(e => e.Name).IsUnique();
+            });
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

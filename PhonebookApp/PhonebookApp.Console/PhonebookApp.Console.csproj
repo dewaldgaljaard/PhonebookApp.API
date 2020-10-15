@@ -12,4 +12,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PhonebookApp.Data\PhonebookApp.Data.csproj" />
+    <ProjectReference Include="..\PhonebookApp.Domain\PhonebookApp.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
