@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhonebookApp.Domain", "PhonebookApp.Domain\PhonebookApp.Domain.csproj", "{725BD6DD-3F8D-400F-B04D-E34351DBDF4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhonebookApp.Domain", "PhonebookApp.Domain\PhonebookApp.Domain.csproj", "{725BD6DD-3F8D-400F-B04D-E34351DBDF4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhonebookApp.Data", "PhonebookApp.Data\PhonebookApp.Data.csproj", "{88D185BF-E6A1-4366-9276-0836734AC37C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhonebookApp.Data", "PhonebookApp.Data\PhonebookApp.Data.csproj", "{88D185BF-E6A1-4366-9276-0836734AC37C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhonebookApp.Console", "PhonebookApp.Console\PhonebookApp.Console.csproj", "{554B5466-EA93-4C78-AD92-16951E1E7FFD}"
 EndProject
@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{2FAD
 	ProjectSection(SolutionItems) = preProject
 		Scripts\20201015214129_init.sql = Scripts\20201015214129_init.sql
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhonebookApp.API", "PhonebookApp.API\PhonebookApp.API.csproj", "{EB2C6798-BC28-458D-8160-AB4E731F7666}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{554B5466-EA93-4C78-AD92-16951E1E7FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{554B5466-EA93-4C78-AD92-16951E1E7FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{554B5466-EA93-4C78-AD92-16951E1E7FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB2C6798-BC28-458D-8160-AB4E731F7666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB2C6798-BC28-458D-8160-AB4E731F7666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB2C6798-BC28-458D-8160-AB4E731F7666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB2C6798-BC28-458D-8160-AB4E731F7666}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
