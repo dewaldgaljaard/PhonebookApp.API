@@ -7,7 +7,7 @@ namespace PhonebookApp.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Type",
+                name: "PhoneBooks",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -16,7 +16,7 @@ namespace PhonebookApp.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Type", x => x.Id);
+                    table.PrimaryKey("PK_PhoneBooks", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -33,9 +33,9 @@ namespace PhonebookApp.Data.Migrations
                 {
                     table.PrimaryKey("PK_Entries", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Entries_Type_PhoneBookId",
+                        name: "FK_Entries_PhoneBooks_PhoneBookId",
                         column: x => x.PhoneBookId,
-                        principalTable: "Type",
+                        principalTable: "PhoneBooks",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -58,7 +58,7 @@ namespace PhonebookApp.Data.Migrations
                 name: "Entries");
 
             migrationBuilder.DropTable(
-                name: "Type");
+                name: "PhoneBooks");
         }
     }
 }
