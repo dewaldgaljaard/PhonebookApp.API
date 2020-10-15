@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PhonebookApp.Console
+﻿namespace PhonebookApp.Console
 {
     class Program
     {
