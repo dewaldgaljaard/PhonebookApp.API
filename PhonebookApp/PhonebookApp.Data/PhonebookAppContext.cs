@@ -8,13 +8,10 @@ namespace PhonebookApp.Data
     {
         public DbSet<PhoneBook> PhoneBooks { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public PhonebookAppContext(DbContextOptions<PhonebookAppContext> options)
+            :base(options)
         {
-            // IMPORTANT: THIS IS NOT PRODUCTION READY. ONLY FOR DEMO PURPOSES.
-            optionsBuilder.UseSqlite("Filename=PhonebookAppDb.db", options =>
-            {
-                options.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
-            });
+            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

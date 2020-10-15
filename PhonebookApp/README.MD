@@ -1,0 +1,2 @@
+The console app was originally created to help with initial project setup. Im leaving it here to show how I used it.
+The console app will no longer work since the OnConfiguring method in DbContext has since been removed.
