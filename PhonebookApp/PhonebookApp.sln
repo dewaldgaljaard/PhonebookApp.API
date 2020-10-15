@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhonebookApp.Domain", "PhonebookApp.Domain\PhonebookApp.Domain.csproj", "{725BD6DD-3F8D-400F-B04D-E34351DBDF4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhonebookApp.Data", "PhonebookApp.Data\PhonebookApp.Data.csproj", "{88D185BF-E6A1-4366-9276-0836734AC37C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhonebookApp.Console", "PhonebookApp.Console\PhonebookApp.Console.csproj", "{554B5466-EA93-4C78-AD92-16951E1E7FFD}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{725BD6DD-3F8D-400F-B04D-E34351DBDF4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{725BD6DD-3F8D-400F-B04D-E34351DBDF4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{725BD6DD-3F8D-400F-B04D-E34351DBDF4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{725BD6DD-3F8D-400F-B04D-E34351DBDF4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88D185BF-E6A1-4366-9276-0836734AC37C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88D185BF-E6A1-4366-9276-0836734AC37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88D185BF-E6A1-4366-9276-0836734AC37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88D185BF-E6A1-4366-9276-0836734AC37C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{554B5466-EA93-4C78-AD92-16951E1E7FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{554B5466-EA93-4C78-AD92-16951E1E7FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{554B5466-EA93-4C78-AD92-16951E1E7FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{554B5466-EA93-4C78-AD92-16951E1E7FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
