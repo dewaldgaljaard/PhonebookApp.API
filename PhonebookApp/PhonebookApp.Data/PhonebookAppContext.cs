@@ -6,7 +6,7 @@ namespace PhonebookApp.Data
 {
     public class PhonebookAppContext : DbContext
     {
-        public DbSet<PhoneBook> Type { get; set; }
+        public DbSet<PhoneBook> PhoneBooks { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

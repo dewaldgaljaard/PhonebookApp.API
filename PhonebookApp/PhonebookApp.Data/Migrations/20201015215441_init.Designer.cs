@@ -9,7 +9,7 @@ using PhonebookApp.Data;
 namespace PhonebookApp.Data.Migrations
 {
     [DbContext(typeof(PhonebookAppContext))]
-    [Migration("20201015214129_init")]
+    [Migration("20201015215441_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,7 +54,7 @@ namespace PhonebookApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Type");
+                    b.ToTable("PhoneBooks");
                 });
 
             modelBuilder.Entity("PhonebookApp.Domain.Entry", b =>

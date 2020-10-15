@@ -52,7 +52,7 @@ namespace PhonebookApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Type");
+                    b.ToTable("PhoneBooks");
                 });
 
             modelBuilder.Entity("PhonebookApp.Domain.Entry", b =>
