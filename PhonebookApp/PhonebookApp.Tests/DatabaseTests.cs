@@ -42,37 +42,5 @@ namespace PhonebookApp.Tests
                 Assert.AreEqual(EntityState.Added, context.Entry(phoneBook).State);
             } 
         }
-
-        [TestMethod]
-        public void CantInsertDuplicateEntryIntoDatabase()
-        {
-            var builder = new DbContextOptionsBuilder();
-            builder.UseInMemoryDatabase("CantInsertDuplicateEntry");
-
-            using (var context = new PhonebookAppContext(builder.Options))
-            {
-                var phoneBook = new PhoneBook
-                {
-                    Name = "Default",
-                    Entries = new List<Entry>
-                    {
-                        new Entry
-                        {
-                            Name = "User1",
-                            PhoneNumber = "0000000000"
-                        },
-                        new Entry
-                        {
-                            Name = "User1",
-                            PhoneNumber = "0000000001"
-                        }
-                    }
-                };
-
-                context.PhoneBooks.Add(phoneBook);
-
-                Assert.AreEqual(EntityState.Added, context.Entry(phoneBook).State);
-            } 
-        }
     }
 }
