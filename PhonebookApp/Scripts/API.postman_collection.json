@@ -7,9 +7,16 @@
 	"item": [
 		{
 			"name": "GET Phonebooks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{APP_URL}}/api/Phonebooks",
 					"host": [
@@ -24,19 +31,27 @@
 			"response": []
 		},
 		{
-			"name": "GET Phonebooks/1",
+			"name": "POST Phonebooks",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Id\":0,\"Name\":\"Default\",\"Entries\":[{\"Id\":0,\"Name\":\"John Doe\",\"PhoneNumber\":\"0000000000\"},{\"Id\":0,\"Name\":\"Jane Doe\",\"PhoneNumber\":\"1111111111\"}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "{{APP_URL}}/api/Phonebooks/1",
+					"raw": "{{APP_URL}}/api/Phonebooks",
 					"host": [
 						"{{APP_URL}}"
 					],
 					"path": [
 						"api",
-						"Phonebooks",
-						"1"
+						"Phonebooks"
 					]
 				}
 			},
