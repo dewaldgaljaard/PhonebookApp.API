@@ -29,10 +29,11 @@ namespace PhonebookApp.API.Controllers
         }
 
         // GET: api/PhoneBooks/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<PhoneBook>> GetPhoneBook(int id)
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<ActionResult<PhoneBook>> GetPhoneBooks(int id)
         {
-            var phoneBook = await _context.PhoneBooks.FindAsync(id);
+            var phoneBook = await _context.PhoneBooks.FirstOrDefaultAsync(n => n.Id == id);
 
             if (phoneBook == null)
             {
@@ -42,69 +43,50 @@ namespace PhonebookApp.API.Controllers
             return phoneBook;
         }
 
-        // PUT: api/PhoneBooks/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpGet("entry/{id}")]
+        public async Task<ActionResult<PhoneBook>> GetEntry(int id)
+        {
+            //var phoneBook = await _context.PhoneBooks.FirstOrDefaultAsync(n => n.Id == id);
+
+            //if (phoneBook == null)
+            //{
+            //    return NotFound();
+            //}
+
+            //return phoneBook;
+
+            throw new NotImplementedException();
+        }
+
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutPhoneBook(int id, PhoneBook phoneBook)
+        public async Task<IActionResult> AddEntry(int id, PhoneBook phoneBook)
         {
-            if (id != phoneBook.Id)
-            {
-                return BadRequest();
-            }
+            //if (id != phoneBook.Id)
+            //{
+            //    return BadRequest();
+            //}
 
-            _context.Entry(phoneBook).State = EntityState.Modified;
+            //_context.Entry(phoneBook).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!PhoneBookExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            //try
+            //{
+            //    await _context.SaveChangesAsync();
+            //}
+            //catch (DbUpdateConcurrencyException)
+            //{
+            //    if (!PhoneBookExists(id))
+            //    {
+            //        return NotFound();
+            //    }
+            //    else
+            //    {
+            //        throw;
+            //    }
+            //}
 
-            return NoContent();
-        }
+            //return NoContent();
 
-        // POST: api/PhoneBooks
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
-        public async Task<ActionResult<PhoneBook>> PostPhoneBook(PhoneBook phoneBook)
-        {
-            _context.PhoneBooks.Add(phoneBook);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetPhoneBook", new { id = phoneBook.Id }, phoneBook);
-        }
-
-        // DELETE: api/PhoneBooks/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<PhoneBook>> DeletePhoneBook(int id)
-        {
-            var phoneBook = await _context.PhoneBooks.FindAsync(id);
-            if (phoneBook == null)
-            {
-                return NotFound();
-            }
-
-            _context.PhoneBooks.Remove(phoneBook);
-            await _context.SaveChangesAsync();
-
-            return phoneBook;
-        }
-
-        private bool PhoneBookExists(int id)
-        {
-            return _context.PhoneBooks.Any(e => e.Id == id);
+            throw new NotImplementedException();
         }
     }
 }
