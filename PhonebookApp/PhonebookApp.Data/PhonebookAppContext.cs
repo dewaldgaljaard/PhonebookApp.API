@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using PhonebookApp.Domain;
 
 namespace PhonebookApp.Data
@@ -16,8 +15,8 @@ namespace PhonebookApp.Data
         /// Used for in memory testing
         /// </summary>
         /// <param name="options"></param>
-        public PhonebookAppContext(DbContextOptions options) 
-            :base(options)
+        public PhonebookAppContext(DbContextOptions options)
+            : base(options)
         {
         }
 
@@ -27,12 +26,6 @@ namespace PhonebookApp.Data
             {
                 optionsBuilder.UseSqlite("Filename=PhonebookTestDb.db");
             }
-        }
-
-        public PhonebookAppContext(DbContextOptions<PhonebookAppContext> options)
-            :base(options)
-        {
-            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
