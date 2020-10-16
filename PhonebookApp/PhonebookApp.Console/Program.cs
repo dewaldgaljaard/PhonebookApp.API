@@ -28,7 +28,12 @@ namespace PhonebookApp.Console
                     {
                         Name = "Dewald",
                         PhoneNumber = "076 201 4779"
-                    }
+                    },
+                    //new Entry
+                    //{
+                    //    Name = "Dewald",
+                    //    PhoneNumber = "076 201 4779"
+                    //}
                 }
                 };
 
