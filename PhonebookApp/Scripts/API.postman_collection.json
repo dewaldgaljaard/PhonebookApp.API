@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "fdd191bd-cc6d-49b2-8467-779c5cedd9c1",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Phonebooks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APP_URL}}/api/Phonebooks",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"Phonebooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Phonebooks/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APP_URL}}/api/Phonebooks/1",
+					"host": [
+						"{{APP_URL}}"
+					],
+					"path": [
+						"api",
+						"Phonebooks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
