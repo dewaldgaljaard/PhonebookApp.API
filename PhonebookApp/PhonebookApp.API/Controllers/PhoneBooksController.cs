@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PhonebookApp.Data;
@@ -19,21 +20,23 @@ namespace PhonebookApp.API.Controllers
         }
 
         [HttpGet]
+        [EnableCors("DefaultPolicy")]
         public async Task<ActionResult<IEnumerable<PhoneBook>>> GetPhoneBooks()
         {
             //_context.Database.EnsureDeleted();
             //_context.Database.EnsureCreated();
 
-            return await _context.PhoneBooks.ToListAsync();
+            return await _context.PhoneBooks.Include(p => p.Entries).ToListAsync();
         }
 
+        [EnableCors("DefaultPolicy")]
         [HttpPost]
         public async Task<ActionResult<PhoneBook>> GetPhoneBooks([FromBody]PhoneBook phoneBook)
         {
             //_context.Database.EnsureDeleted();
             //_context.Database.EnsureCreated();
 
-            var pBook = await _context.PhoneBooks.FirstOrDefaultAsync(n => n.Id == phoneBook.Id);
+            var pBook = await _context.PhoneBooks.FirstOrDefaultAsync(n => n.Name == phoneBook.Name);
             if (pBook == null)
             {
                 _context.PhoneBooks.Add(phoneBook);
@@ -41,6 +44,7 @@ namespace PhonebookApp.API.Controllers
             else
             {
                 pBook.Entries = phoneBook.Entries;
+                _context.Entry(pBook).State = EntityState.Modified;
             }
 
             _context.SaveChanges();
